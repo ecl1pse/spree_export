@@ -5,6 +5,7 @@ feature 'Spree Admin Orders Controller Export CSV' do
 
   background do
     sign_in_as!(create(:admin_user))
+    create_list(:completed_order_with_totals, 1)
     visit spree.admin_path
     click_link "Orders"
   end
