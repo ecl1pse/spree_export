@@ -33,6 +33,7 @@ require 'spree_export/factories'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
+  config.extend Spree::TestingSupport::AuthorizationHelpers::Request, :type => :feature
 
   # == URL Helpers
   #
