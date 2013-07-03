@@ -9,7 +9,7 @@
 #   add_group 'Libraries', 'lib'
 # end
 require 'coveralls'
-Coveralls.wear!
+Coveralls.wear!("rails")
 
 # Configure Rails Environment
 ENV['RAILS_ENV'] = 'test'
