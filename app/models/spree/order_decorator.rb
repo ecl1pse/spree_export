@@ -1,6 +1,14 @@
 require 'csv'
 Spree::Order.instance_eval do
 
+  def self.completed_between(start_date, end_date)
+    where(completed_at: start_date..end_date)
+  end
+
+  def self.paid_and_ready_to_ship
+    where(payment_state: 'paid', shipment_state: 'ready')
+  end
+
   def self.export_csv(options = {})
     CSV.generate(options) do |csv|
       address_column_names = ["firstname", "lastname", "address1", "address2", "city", "zipcode", "phone", "state_name", "alternative_phone", "company"]
