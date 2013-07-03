@@ -4,6 +4,7 @@ SpreeExport
 [![Code Climate](https://codeclimate.com/github/ecl1pse/spree_flash_sales.png)](https://codeclimate.com/github/ecl1pse/spree_flash_sales)
 [![Dependency Status](https://gemnasium.com/ecl1pse/spree_export.png)](https://gemnasium.com/ecl1pse/spree_export)
 [![Coverage Status](https://coveralls.io/repos/ecl1pse/spree_export/badge.png)](https://coveralls.io/r/ecl1pse/spree_export)
+[![Build Status](https://travis-ci.org/ecl1pse/spree_export.png?branch=master)](https://travis-ci.org/ecl1pse/spree_export)
 
 
 Export orders to CSV. Backed with Specs.
