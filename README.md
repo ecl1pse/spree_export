@@ -1,7 +1,11 @@
 SpreeExport
 ===========
 
-Introduction goes here.
+Export orders to CSV. Backed with Specs.
+
+Gems are not recommended for Spree extensions.
+
+Please use branch 2-0-stable for production.
 
 Installation
 ------------
@@ -37,4 +41,4 @@ Simply add this require statement to your spec_helper:
 require 'spree_export/factories'
 ```
 
-Copyright (c) 2013 [name of extension creator], released under the New BSD License
+Copyright (c) 2013 [ecl1pse], released under the New BSD License
