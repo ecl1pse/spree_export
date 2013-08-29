@@ -10,6 +10,8 @@ Spree::Order.instance_eval do
   end
 
   def self.export_csv(options = {})
+    options = SpreeExport.csv_options.merge options
+
     CSV.generate(options) do |csv|
       address_column_names = ["firstname", "lastname", "address1", "address2", "city", "zipcode", "phone", "state_name", "alternative_phone", "company"]
       order_column_names = ["id", "number", "total", "state", "shipment_state", "email", "user_id", "completed_at", "payment_state", "special_instructions"]

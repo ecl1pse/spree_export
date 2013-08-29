@@ -14,6 +14,19 @@ module SpreeExport
         inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_export\n", :before => /\*\//, :verbose => true
       end
 
+      def create_initializer
+        create_file 'config/initializers/spree_export.rb' do
+          string = <<-RUBY.gsub /^ {12}/, ''
+            # config/initializers/spree_export.rb
+
+            SpreeExport.config do |config|
+              config.csv_options = {}
+              config.output_encoding = Encoding::UTF_8
+            end
+          RUBY
+        end
+      end
+
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=spree_export'
       end

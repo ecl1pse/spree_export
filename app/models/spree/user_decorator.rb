@@ -2,6 +2,8 @@ require 'csv'
 Spree::User.instance_eval do
 
   def self.export_csv(options = {})
+    options = SpreeExport.csv_options.merge options
+
     CSV.generate(options) do |csv|
       user_column_names = ["id", "email", "login"]
       column_headers = user_column_names
